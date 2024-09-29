@@ -1,0 +1,140 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>sito di prova</title>
+	<meta name="author" content="Luke">
+	<meta name="description" content="Los Angeles">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"
+</head>
+
+<body>
+	<header> <!--Parte alta della pagina-->
+		<h1>Titolo grande</h1>
+		<h2>Titolo grande</h2>
+		<h3>Titolo grande</h3>
+		<h4>Titolo grande</h4>
+		<h5>Titolo grande</h5>
+		<h6>Titolo grande</h6> <!-- MAX 6 h-->
+	</header>
+	
+	<div>
+		Hello <b>brothers</b>!
+	</div><br>
+	<div>
+		Welcome to <i>Los Angeles</i>!
+	</div>
+	<p>
+		Yoo BBRROO, this is a PARAGRAPHH
+	</p>
+	<div>
+		<ul type="square">
+			<li>Losco</li>
+			<li>Bosco</li>
+			<li>Tosco</li>
+		</ul><br>
+		<ul type="circle">
+			<li>Losci</li>
+			<li>Bosci</li>
+			<li>Tosci</li>
+		</ul><br>
+		<ol type="A">
+			<li>Losca</li>
+			<li>Bosca</li>
+			<li>Tosca</li>
+		</ol><br>
+	</div>
+	
+	<div>
+		<h3>Tabella di esempio</h3>
+		<table border=1>
+			<tr> <!-- campi della tabella-->
+				<th>Nome</th>
+				<th>Cognome</th>
+				<th>Età</th>
+				<th>Sport praticati</th>
+			</tr>
+			<tr><!-- elementi della tabella-->
+				<td>Luca</td>
+				<td>Altea</td>
+				<td>17 per poco</td>
+				<td>
+					<ul type="circle">
+						<li>Bbbbbisket</li>
+						<li>Divano</li>
+					</ul>
+				</td>
+			</tr>
+			<tr><!-- elementi della tabella-->
+				<td>Vittorio</td>
+				<td>Bertello</td>
+				<td rowspan="2">18</td> <!-- usare per più righe, tipo unisci celle excel-->
+				<td>
+					<ul type="circle">
+						<li>Basket</li>
+						<li>Calcio</li>
+						<li>Palla</li>
+					</ul>
+				</td>
+			</tr>
+			<tr><!-- elementi della tabella-->
+				<td>Andrea</td>
+				<td>Foglia</td>
+				
+				<td>
+					<ul type="circle">
+						<li>Basket</li>
+						<li>Calcio</li>
+						<li>Palla</li>
+					</ul>
+				</td>
+			</tr>
+			<tr><!-- elementi della tabella-->
+				<td>Ricky</td>
+				<td>One</td>
+				<td>&nbsp;</td> <!--spazio vuoto-->
+				<td>
+					<ul type="circle">
+						<li>Chess</li>
+					</ul>
+				</td>
+			</tr>
+			<tr><!-- elementi della tabella-->
+				<td colspan="2">Anonimo</td> <!-- occupare per + campi-->
+				
+				<td>10</td>
+				<td>
+					<ul type="circle">
+						<li>Not</li>
+					</ul>
+				</td>
+			</tr>
+			<tr><!-- elementi della tabella-->
+				<td colspan="4">Anonimo</td> <!-- occupa tutti + aggiuynge due colonne pk ne ha due in +-->
+				
+				<td>10</td>
+				<td>
+					<ul>
+						<li>Not</li>
+					</ul>
+				</td>
+			</tr>
+		</table>
+	</div>
+	
+	<div> <!-- link-->
+		<a href="https://it.wikipedia.org/wiki/Scuola_di_Atene#:~:text=La%20Scuola%20di%20Atene%20%C3%A8%20un%20affresco%20che%20celebra%20la,incorniciato%20da%20un%20arco%20dipinto.">La MIA scuola</a><br><!--a=ancora, href per il link a cui si rimanda-->
+		<a href=" 20240927_EsTabelle.html" target="_blank">Tabella di Luca</a><br> <!--aprire un'altra pagina, ma in questo modo deve per forza essere nella stessa cartella-->
+		<a href=" 20240927_EsTabelle.html" target="_self">Tabella di Luca</a><br>
+	</div>
+	
+	<div>
+		<img src="ornitorinco.jpg"> <!--per un'immagine salvata in questo nome nella stessa cartella-->
+		<img src="../FOTO/ornitorinco.jpg" title="Orno"> <!--immagine presente da un'altra parte; ../ = risalire di una cartella; title per mettere un titolo quando si punta il cursore sulla foto-->
+		<img src="./FOTO/ornitorinco.jpg"> <!--immagine presente in una cartella all'interno della stessa cartella in cui è il file-->
+		<img src="../FOTO/ornitorinco.jpg" alt="Foto orno"> <!--cosa dire se non trova l'immagine-->
+	</div>
+
+</body>
+
+</html>
