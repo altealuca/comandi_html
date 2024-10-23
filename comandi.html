@@ -17,143 +17,74 @@
 6. controllare su GitHub se il file è stato correttamente modificato
 -->
 
+
+
 <!doctype html>
 <html>
 
 <head>
-	<title>sito di prova</title>
-	<meta name="author" content="Luke">
-	<meta name="description" content="Los Angeles">
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Pagina dei comandi base HTML</title> <!--titolo della scheda, della pagina dal Browser-->
+	<meta name="author" content="ALtea Luca">
+	<meta name="description" content="Comandi">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0"><!--Impostare il riferimento di scala in base alla dimensione dello schermo-->
+    <link href="stili.css" rel="stylesheet" type="text/css"><!--riferimento alla pagina con gli stili, se è nella stessa cartella-->
 </head>
 
 <body>
-	<header> <!--Parte alta della pagina-->
-		<h1>Titolo grande</h1>
-		<h2>Titolo grande</h2>
-		<h3>Titolo grande</h3>
-		<h4>Titolo grande</h4>
-		<h5>Titolo grande</h5>
-		<h6>Titolo grande</h6> <!-- MAX 6 h-->
+    <header> <!--Parte alta della pagina, titolo-->
+		<h1>Titolo</h1><!--h=dimensione titolo, da h1 a h6-->
 	</header>
-	
-	<div>
-		Hello <b>brothers</b>!
-	</div><br>
-	<div>
-		Welcome to <i>Los Angeles</i>!
-	</div>
-	<p>
-		Yoo BBRROO, this is a PARAGRAPHH
-	</p>
-	<div>
-		<ul type="square">
-			<li>Losco</li>
-			<li>Bosco</li>
-			<li>Tosco</li>
-		</ul><br>
-		<ul type="circle">
-			<li>Losci</li>
-			<li>Bosci</li>
-			<li>Tosci</li>
-		</ul><br>
-		<ol type="A">
-			<li>Losca</li>
-			<li>Bosca</li>
-			<li>Tosca</li>
-		</ol><br>
-	</div>
-	
-	<div>
-		<h3>Tabella di esempio</h3>
-		<table border=1>
-			<tr> <!-- campi della tabella-->
-				<th>Nome</th>
-				<th>Cognome</th>
-				<th>Età</th>
-				<th>Sport praticati</th>
-			</tr>
-			<tr><!-- elementi della tabella-->
-				<td>Luca</td>
-				<td>Altea</td>
-				<td>17 per poco</td>
-				<td>
-					<ul type="circle">
-						<li>Bbbbbisket</li>
-						<li>Divano</li>
-					</ul>
-				</td>
-			</tr>
-			<tr><!-- elementi della tabella-->
-				<td>Vittorio</td>
-				<td>Bertello</td>
-				<td rowspan="2">18</td> <!-- usare per più righe, tipo unisci celle excel-->
-				<td>
-					<ul type="circle">
-						<li>Basket</li>
-						<li>Calcio</li>
-						<li>Palla</li>
-					</ul>
-				</td>
-			</tr>
-			<tr><!-- elementi della tabella-->
-				<td>Andrea</td>
-				<td>Foglia</td>
-				
-				<td>
-					<ul type="circle">
-						<li>Basket</li>
-						<li>Calcio</li>
-						<li>Palla</li>
-					</ul>
-				</td>
-			</tr>
-			<tr><!-- elementi della tabella-->
-				<td>Ricky</td>
-				<td>One</td>
-				<td>&nbsp;</td> <!--spazio vuoto-->
-				<td>
-					<ul type="circle">
-						<li>Chess</li>
-					</ul>
-				</td>
-			</tr>
-			<tr><!-- elementi della tabella-->
-				<td colspan="2">Anonimo</td> <!-- occupare per + campi-->
-				
-				<td>10</td>
-				<td>
-					<ul type="circle">
-						<li>Not</li>
-					</ul>
-				</td>
-			</tr>
-			<tr><!-- elementi della tabella-->
-				<td colspan="4">Anonimo</td> <!-- occupa tutti + aggiuynge due colonne pk ne ha due in +-->
-				
-				<td>10</td>
-				<td>
-					<ul>
-						<li>Not</li>
-					</ul>
-				</td>
-			</tr>
-		</table>
-	</div>
-	
-	<div> <!-- link-->
-		<a href="https://it.wikipedia.org/wiki/Scuola_di_Atene#:~:text=La%20Scuola%20di%20Atene%20%C3%A8%20un%20affresco%20che%20celebra%20la,incorniciato%20da%20un%20arco%20dipinto.">La MIA scuola</a><br><!--a=ancora, href per il link a cui si rimanda-->
-		<a href=" 20240927_EsTabelle.html" target="_blank">Tabella di Luca</a><br> <!--aprire un'altra pagina, ma in questo modo deve per forza essere nella stessa cartella-->
-		<a href=" 20240927_EsTabelle.html" target="_self">Tabella di Luca</a><br>
-	</div>
-	
-	<div>
-		<img src="ornitorinco.jpg"> <!--per un'immagine salvata in questo nome nella stessa cartella-->
-		<img src="../FOTO/ornitorinco.jpg" title="Orno"> <!--immagine presente da un'altra parte; ../ = risalire di una cartella; title per mettere un titolo quando si punta il cursore sulla foto-->
-		<img src="./FOTO/ornitorinco.jpg"> <!--immagine presente in una cartella all'interno della stessa cartella in cui è il file-->
-		<img src="../FOTO/ornitorinco.jpg" alt="Foto orno"> <!--cosa dire se non trova l'immagine-->
-	</div>
 
+    <div><!--per dividere sezioni diverse di un programma-->
+        <b>xx</b><!--testo in grassetto-->
+        <i>xx</i><!--testo in corsivo-->
+        <u>xx</u><!--testo sottolineato-->
+        
+        <aside>
+            <nav><!--indica i link di navigazione-->
+                <a href="page.html">Altra pagina</a><!--a=ancora, href per il link a cui si rimanda(cosi se stessa cartella, se no link intero)-->
+                <a href="page.html" target="_blank">Aprire link su altra pagina</a>
+                <a href="page.html" target="_self">Aprire link su stessa pagina, sostituire</a>
+                <a href="#top">Torna a inizio pagina</a>
+                <a href="https://www.w3schools.com/">w3school</a>
+            </nav>
+            <p class="c">paragrafo</p><!--per separare sezioni di testo-->
+            <br><!--per andare a capo. dopo il tag-->
+        </aside>
+
+        <section>Sezione della pagina</section>
+
+        <ul type="square"><!--unordered list, elenco puntato con quadrati-->
+            <li>elemento1</li><!--elemento dell'elenco (qualsiasi tipo)-->
+        </ul>
+        <ul type="circle">xx</ul><!--unordered list, elenco puntato con cerchi-->
+        <ol type="A">xx</ol><!--ordered list, elenco puntato con lettere oppure: 1,a,A,I,i-->
+        
+        <table border=1><!--tabella-->
+            <tr><!--table row, per ogni riga di una tabella-->
+                <th>campo1</th><!--table header, primo campo della tabella-->
+                <th>campo2</th><!--secondo campo della tabella...-->
+            </tr>
+            <tr>
+                <td>xx</td><!--table data, elemento della tabella in corrispondenza del primo th-->
+                <td style="color:green;">xx</td><!--elemento della tabella in corrispondenza del secondo th...-->
+				<td rowspan="2">xx</td> <!--elemento xx anche per quella posizione alla riga successiva (2=2 righe)-->
+                <td colspan="2">xx</td> <!--elemento xx anche per la cella/posizione successiva (2=2 caselle)-->
+                <td>&nbsp;</td> <!--spazio vuoto-->
+                <td></td><!--se si sfora di celle, la tabella si allarga automaticamente-->
+            </tr>
+        </table>
+
+        <img src="foto.jpg"><!--immagine salvata nella stessa cartella-->
+		<img src="../images/foto.jpg" title="Foto"> <!--immagine presente in altra parte; ../ = risalire di una cartella; title=titolo quando si punta il cursore sulla foto-->
+		<img src="./images/foto.jpg"> <!--immagine presente in una cartella all'interno della stessa cartella del file html-->
+		<img src="../images/foto.jpg" alt="Foto assente"> <!--cosa dire se non trova l'immagine-->
+
+    </div>
+
+    <footer><!--parte bassa della pagina-->
+		<h3>Devoleped by Altea Luca</h3>
+	</footer>
 </body>
 
 </html>

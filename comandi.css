@@ -1,24 +1,37 @@
+/*	FOGLIO DEGLI STILI	*/
+
 *{ /*   *=per qualsiasi tag, selettore universale*/
 	/*stili per qualsiasi tag*/
 }
 
 p{
-	/*tutti gli stili applicati ai tag p*/
+	/*  tutti gli stili applicati ai tag p   */
 }
 
 .c{
-    /*vale per tutti i tag che hanno quell'attributo all'interno*/ /* .=sto definendo una classe, di nome c1*/
-	/*applicati a tutti i tag che hanno attrubuto class="c1"*/
-    /*class="c1"*/
+    /*  vale per tutti i tag che hanno quell'attributo all'interno  */ /* .=sto definendo una classe, di nome c1*/
+	/*  applicati a tutti i tag che hanno attrubuto class="c"  */
 }
 
-#id1{
-    /*solo per quel tag con quell'attributo*/
-	/*stili applicati al solo tag con id ="id1"*/
-	/*id="id1"*/
+#id{
+    /*  solo per quel tag con quell'attributo   */
+	/*  stili applicati al solo tag con id ="id" */
 }
 
 /*ESEMPI*/
+*{
+    font-size: 16pt;
+}
 h1{ /*solo per tag h1*/
 	font-family: Impact;
+    background-image: url("../images/foto.jpg");
+}
+c{
+    background-color: mediumseagreen;
+    color: #FFFDD0;/*colore testo*/
+    background-position: center center; /*centrare lo sfondo*/
+    text-align: center;
+    border: solid 18pt;
+    border-color: beige;
+    border-width: 15pt;
 }
