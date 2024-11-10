@@ -1,0 +1,160 @@
+<!doctype html>
+<html>
+<head>
+	<script type="text/javascript">
+		function saluto(){ /*parola chiave function+nome funzione+attributi da passare*/
+			a=5; /*la si può non definire, la dichiara lui in automatico*/
+			b="ciao solo ad alcuni";
+			alert("Ciao!"); /*alla fine di ogni riga ; . Finchè non si dà ok non carica la pagina*/
+			alert(b);
+		}
+		function sopra(obj){
+			obj.innerHTML="MOuse sopra l'intestazione"; /*mettere nel tag html quello che gli dico di scrivere*/
+			document.getElementById("r1").innerHTML="Riga A";
+			document.getElementById("r2").innerHTML="Riga B";
+		}
+		function ripristino(obj){
+			obj.innerHTML="Introduzione Javascript"; /*rimettere nel tag html il titolo di prima*/
+		    document.getElementById("r1").innerHTML="Riga 1";
+			document.getElementById("r2").innerHTML="Riga 2";
+		}
+        function saluta(){
+            var nome=document.getElementById("name").value;
+            var cognome=document.getElementById("surname").value;
+            var data=document.getElementById("birth").value;
+            var email=document.getElementById("email").value;
+            var password=document.getElementById("password").value;
+            var number=document.getElementById("number").value;
+            alert("ciao "+nome+" "+cognome+" "+" nato il "+data+" con email "+email);
+        }
+        function verificapassword(){
+            var passwordattesa=nome+"."+cognome;
+            var password =document.getElementById("password").value;
+            if(password==passwordattesa){
+                alert("password corretta");
+            }else{
+                alert("password non e nome.cognome");
+            }
+        }
+        function soprasopra(obj){
+            obj.style.color="red";
+        }
+        function cambiafoto(obj){
+            obj.src="./perry_parte2.webp";
+        }
+        function ripristinafoto(obj){
+            obj.src="./Perry_the_Platypus.png";
+        }
+        function cambiareimm(obj){
+            if(obj.src.includes("./Perry_the_Platypus.png")){
+                obj.src="./perry_parte2.webp";
+            }else{
+                obj.src=="./Perry_the_Platypus.png"
+            }
+        }
+        function stampasesso(){
+            if(document.getElementById("sessoM").checked){
+                alert("sei un maschio");
+            }else if(document.getElementById("sessoF").checked){
+                alert("sei una femmina");
+            }else{
+                alert("sei niente");
+            }
+        }
+        function stampasport(){
+            sport="";
+            if(document.getElementById("calcio").checked){
+                sport=sport+" calcio";
+            }else if(document.getElementById("basket").checked){
+                sport=sport+" basket";
+            }if(document.getElementById("pallavolo").checked){
+                sport=sport+" pallavolo";
+            }
+            alert(sport);
+        }
+        function stampacibo(aa){
+            if(aa==1){
+                alert(document.getElementById("selection").value);
+                alert(document.getElementById("numerino").value);
+            }else{
+                document.getElementById("r1").innerHTML=document.getElementById("numerino").value;
+            }
+            
+        }
+		
+	</script>
+	
+	<!--OPPURE-->
+	
+	<script type="text/javascript" src="comandi.js"> /*nell'altro file si mette tutto quello che c'era prima in tutto lo script*/
+	</script>
+	
+</head>
+<body onload="saluto();"> <!--si richiama una funzione presente nello script-->
+	<div>
+    <h1 onmouseover="sopra(this);" onmouseout="ripristino(this);"></h1> <!--eventi del mouse nel div (qui se il mouse va sopra si richiama la funzione)-->
+		<h1>Introduzione Javascript</h1>
+	</div>
+
+	<div>
+		<h3 id="r1">Riga 1</h3> <!--per identificare ciascun tag per poi richiamarlo-->
+		<h3 id="r2">Riga 2</h3>
+	</div>
+
+    <div>
+        <form>
+            <h3>Nome</h3>
+            <input type="text" value="" id="name"> <!--altri type: password, email-->
+            <h3>Cognome</h3>
+            <input type="text" value="" id="surname">
+            <h3>Data di nascita</h3>
+            <input type="date" value="" id="birth">
+            <h3>Email</h3>
+            <input type="email" value="" id="email">
+            <h3>Password</h3>
+            <input type="password" value="" id="password">
+            <h3>Eta</h3>
+            <input type="number" value="" id="number"> <!--possibilità di scorrere i numeri-->
+            <h3>Sesso</h3> <!--radio button-->
+            F<input type="radio" name="sesso" value="F" id="sessoF">
+            M<input type="radio" name="sesso" value="M" id="sessoM"><!--mettergli stesso nome=metterli nello stesso gruppo, per non poterli selezionare entrambi-->
+            <h3>Sport</h3>
+            Calcio<input type="checkbox" id="calcio">
+            Basket<input type="checkbox" id="basket">
+            Pallavolo<input type="checkbox" id="pallavolo">
+            <h3>Cibo buono</h3>
+            <select id="selection" onchange="stampacibo(1);"> <!--primo modo per invocare la funzione del cibo prefe-->
+                <option value=""></option> <!--opzioni del menu a tendina-->
+                <option value="pizza">pizza</option>
+                <option value="burger">burger</option>
+                <option value="sushi">sushi</option>
+                <option value="veggy">veggy</option>
+            </select>
+            <div>
+                <button>Saluta</button>
+                <input type="submit" value="saluta" onclick="saluta();">
+                <input type="verifica" value="verificapassword" onclick="verificapassword();"> <!--funzionje per verificare se la password e nome.cognome-->
+                <input type="reset" value="Reset"> <!--crea da solo il button e sbianca tutti i caratteri del form; bisogna solo scrivere cosa si vuole sopra il button-->
+                <input type="button" value="stampasesso" onclick="stampasesso();">
+                <input type="button" value="stampasport" onclick="stampasport();">
+                <input type="button" value="stampacibo" onclick="stampacibo(2);"><!--secondo modo per invocare la funzione del cibo prefe-->
+                <input type="hidden" value="7" id="numerino"><!--tra "" anche se numero-->
+            </div>
+        </form>
+    </div>
+
+    <div>
+        <h1 onmouseover="sopra(this);"></h1> <!--cambiare colore titolo-->
+        <img src="./Perry_the_Platypus.png" onmouseover="cambiafoto(this);" onmouseout="ripristinafoto(this);"> <!--cambiare un'immagine quando si passa sopra alla foto e rimettere la precedente quando si esce-->
+    </div>
+    
+    <div>
+        <img src="./Perry_the_Platypus.png" onmouseover="cambiareimm(this);"> <!--cambiare un'immagine quando si passa sopra alla foto e rimettere la precedente quando si esce-->
+    </div>
+
+    <div>
+
+    </div>
+</body>
+
+</html>
